@@ -8,15 +8,18 @@ use App\Http\Controllers\ProdutoController;
 use Illuminate\Support\Facades\Route;
 
 // Rotas de Autenticação
-Route::get('/', [AuthController::class, 'index'])->name('login.form');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/register', [AuthController::class, 'register'])->name('register.form');
 Route::post('/register', [AuthController::class, 'store'])->name('register');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/login', [AuthController::class, 'index'])->name('login.form');
+Route::get('/', fn () => redirect()->route('login.form'));
 
 // Rotas Públicas
 Route::get('/home', [PaginaController::class, 'home'])->name('home');
-Route::get('/paginainicial', [PaginaController::class, 'index'])->name('paginainicial');
+Route::get('/paginainicial', function () {
+    return redirect()->route('home');
+})->name('paginainicial');
 Route::get('/sobre', [PaginaController::class, 'sobre'])->name('sobrenos');
 Route::get('/contato', [PaginaController::class, 'contato'])->name('contato');
 

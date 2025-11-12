@@ -39,7 +39,7 @@ class AuthController extends Controller
                 ]);
             }
 
-            return redirect()->intended('paginainicial');
+            return redirect()->intended(route('home'));
         }
 
         return back()->withErrors([
@@ -76,7 +76,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('paginainicial')->with('success', 'Conta criada com sucesso!');
+        return redirect()->route('home')->with('success', 'Conta criada com sucesso!');
     }
 
     /**

@@ -20,7 +20,7 @@ class PaginaController extends Controller
     
     public function index()
     {
-        return view('paginainicial');
+        return redirect()->route('home');
     }
 
     public function sobre()

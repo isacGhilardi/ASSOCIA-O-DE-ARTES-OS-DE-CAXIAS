@@ -21,109 +21,138 @@
     <!-- Estilos adicionais por página -->
     @yield('style')
 
+    <!-- Fix para garantir que os links da navbar sejam visíveis -->
     <style>
-        /* Botão logout no menu */
-        .btn-logout {
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 1rem;
-            padding: 0;
-            text-decoration: none;
-            font-family: inherit;
+        body {
+            background-color: #F9F7D3 !important;
+            background-image: none !important;
         }
 
-        .btn-logout:hover {
-            color: #f0a500; /* mesmo hover dos links */
-            text-decoration: underline;
+        .navbar {
+            background-color: rgba(89, 37, 7, 0.7) !important;
         }
-        
-        /* Menu hamburger para mobile */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 5px;
+
+        .nav-link,
+        .navbar-nav .nav-link,
+        .navbar-options .nav-link,
+        .nav-item a {
+            color: #F9F7D3 !important;
+            text-decoration: none !important;
+            font-weight: 600 !important;
+            display: inline-block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
         }
-        
-        @media (max-width: 767px) {
-            .menu-toggle {
-                display: block;
+
+        .navbar-nav {
+            visibility: visible !important;
+            align-items: center !important;
+        }
+
+        .navbar-options {
+            align-items: center !important;
+        }
+
+        .navbar-options.active {
+            display: block !important;
+        }
+
+        @media (min-width: 900px) {
+            .navbar-options {
+                display: flex !important;
+                align-items: center !important;
             }
-            
-            nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #7A2E1D;
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-                z-index: 1000;
+
+            .navbar-nav {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
             }
-            
-            nav.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                padding: 20px;
-            }
+        }
+
+        /* Botão Associe-se */
+        .btn-associe {
+            background-color: #F2EB85;
+            color: #592507 !important;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700 !important;
+            transition: all 0.3s ease;
+            border: 2px solid #F2EB85;
+        }
+
+        .btn-associe:hover {
+            background-color: transparent;
+            color: #F2EB85 !important;
+            border-color: #F2EB85;
         }
     </style>
+
 </head>
-<body id="top">
+<body id="top" class="@yield('body_class')">
 
     <!-- Cabeçalho -->
-    <header>
-        <div class="logo">
-            <a href="{{ route('paginainicial') }}">
-                <img src="{{ asset('imagens/logo.png') }}" alt="Associação dos Artesãos de Caxias">
-                <h1 style="color:white;">Associação dos Artesãos de Caxias</h1>
+    <header class="header">
+        <nav class="navbar">
+            <a class="navbar-logo" href="{{ route('home') }}">
+                <img class="circle" src="{{ asset('imagens/artesanato_alunos/logo-artesaos.png') }}" alt="Associação dos Artesãos de Caxias">
+                <img id="name" src="{{ asset('imagens/artesanato_alunos/artesaos.png') }}" alt="Associação dos Artesãos de Caxias">
             </a>
-        </div>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-            <i class="fas fa-bars"></i>
-        </button>
+            <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Alternar navegação">☰</button>
 
-        <nav id="navMenu">
-            <ul>
-                <li><a href="{{ route('sobrenos') }}">Sobre</a></li>
-                <li><a href="{{route('produtos')}}">Produtos</a></li>
-                <li><a href="{{route('evento')}}">Eventos</a></li>
-                <li><a href="{{ route('contato') }}">Contato</a></li>
-                @auth
-                    @if(auth()->user()->isAdmin())
-                        <li><a href="{{ route('admin.dashboard') }}">Painel Admin</a></li>
-                    @endif
-                @endauth
-                <li><a href="#associe" class="btn-cta">Associe-se</a></li>
-
-                <!-- Logout estilizado -->
-                @auth
-                <li>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit" class="btn-logout">Sair</button>
-                    </form>
-                </li>
-                @endauth
-            </ul>
+            <div class="navbar-options" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item {{ request()->routeIs('home') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('home') }}#sobre-section">Sobre nós</a>
+                    </li>
+                    <li class="nav-item {{ request()->routeIs('evento*') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('evento') }}">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('home') }}#artesanatos-section">Artesanatos</a>
+                    </li>
+                    <li class="nav-item {{ request()->routeIs('produtos') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('produtos') }}">Produtos</a>
+                    </li>
+                    @auth
+                        @if(auth()->user()->isAdmin())
+                            <li class="nav-item {{ request()->routeIs('admin.*') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('admin.dashboard') }}">Painel Admin</a>
+                            </li>
+                        @endif
+                    @endauth
+                    <li class="nav-item {{ request()->routeIs('contato') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('contato') }}">Contato</a>
+                    </li>
+                    @guest
+                        <li class="nav-item {{ request()->routeIs('login.form') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('login.form') }}">Login</a>
+                        </li>
+                    @endguest
+                    @auth
+                        @if(auth()->user()->isAdmin())
+                            <li class="nav-item {{ request()->routeIs('admin.*') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('admin.dashboard') }}">Painel Admin</a>
+                            </li>
+                        @endif
+                        <li class="nav-item nav-item-logout">
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit" class="btn-logout">Sair</button>
+                            </form>
+                        </li>
+                    @endauth
+                </ul>
+            </div>
         </nav>
     </header>
 
     <!-- Conteúdo principal -->
-    <main class="p-2">
+    <main class="layout-main @yield('main_class')">
         @yield('content')
     </main>
 
@@ -171,53 +200,48 @@
     <!-- Bootstrap Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Script de interatividade -->
-    <script src="{{ asset('js/ui.js') }}"></script>
-    
-    <!-- Script do menu responsivo -->
+    <!-- Script de debug para navbar -->
     <script>
+        // Debug: Force navbar visibility
         document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menuToggle');
-            const navMenu = document.getElementById('navMenu');
-            const menuIcon = menuToggle.querySelector('i');
-
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-                
-                // Trocar ícone entre hambúrguer e X
-                if (navMenu.classList.contains('active')) {
-                    menuIcon.classList.remove('fa-bars');
-                    menuIcon.classList.add('fa-times');
-                    menuToggle.setAttribute('aria-label', 'Fechar menu');
-                } else {
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
-                    menuToggle.setAttribute('aria-label', 'Abrir menu');
+            console.log('Navbar Debug: Checking elements...');
+            
+            const navbarOptions = document.getElementById('navbarNav');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            console.log('navbarOptions:', navbarOptions);
+            console.log('navLinks count:', navLinks.length);
+            console.log('navItems count:', navItems.length);
+            
+            // Force visibility in desktop
+            if (window.innerWidth >= 900) {
+                if (navbarOptions) {
+                    navbarOptions.style.display = 'flex';
+                    navbarOptions.style.visibility = 'visible';
+                    navbarOptions.style.opacity = '1';
+                    console.log('Desktop: Navbar forced visible');
                 }
-            });
-
-            // Fechar menu quando clicar em um link
-            navMenu.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
-                    navMenu.classList.remove('active');
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
-                    menuToggle.setAttribute('aria-label', 'Abrir menu');
-                }
-            });
-
-            // Fechar menu quando redimensionar para desktop
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 767) {
-                    navMenu.classList.remove('active');
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
-                    menuToggle.setAttribute('aria-label', 'Abrir menu');
-                }
+            }
+            
+            // Force link colors
+            navLinks.forEach((link, index) => {
+                link.style.color = '#F9F7D3';
+                link.style.display = 'inline-block';
+                link.style.visibility = 'visible';
+                link.style.opacity = '1';
+                console.log(`Link ${index}:`, link.textContent, 'color:', getComputedStyle(link).color);
             });
         });
     </script>
 
+    <!-- Script de interatividade -->
+    <script src="{{ asset('js/ui.js') }}"></script>
+    
+    @if(request()->routeIs('home'))
+        <script src="{{ asset('js/home.js') }}"></script>
+    @endif
+    
     <!-- Scripts específicos de cada página -->
     @yield('scripts')
 </body>

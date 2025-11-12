@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('navbarNav');
     const navLinks = document.querySelectorAll('.navbar-nav .nav-item a');
     const navbarNav = document.querySelector('.navbar-nav');
-    
+
     const activeLine = document.createElement('span');
     activeLine.classList.add('active-line');
     if (navbarNav) {
@@ -12,7 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function positionActiveLine() {
-        const activeItem = document.querySelector('.navbar-nav .nav-item.active');
+        if (!navbarNav) {
+            return;
+        }
+
+        const activeItem = navbarNav.querySelector('.nav-item.active');
         if (activeItem && window.innerWidth >= 900) {
             const activeLink = activeItem.querySelector('a');
             if (activeLink) {
@@ -46,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = Array.from(document.querySelectorAll('section[id]'));
 
     function clearActive() {
-        navLinks.forEach(link => link.closest('.nav-item').classList.remove('active'));
+        navLinks.forEach(link => link.closest('.nav-item')?.classList.remove('active'));
     }
 
     function markActiveBySectionId(id) {
@@ -105,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', () => {
         positionActiveLine();
-        if (window.innerWidth >= 900 && navMenu.classList.contains('active')) {
+        if (window.innerWidth >= 900 && navMenu && navMenu.classList.contains('active')) {
             navMenu.classList.remove('active');
             navbarToggler.setAttribute('aria-expanded', false);
             navbarToggler.innerHTML = '☰';

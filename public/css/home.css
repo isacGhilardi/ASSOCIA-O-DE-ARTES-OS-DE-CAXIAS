@@ -15,6 +15,11 @@ body {
     margin: 0;
 }
 
+.layout-main.home-main {
+    padding: 0;
+    text-align: initial;
+}
+
 body::after {
     content: "";
     position: fixed;
@@ -34,114 +39,8 @@ a {
     font-weight: 600;
 }
 
-/* === HEADER E NAVBAR DOS ALUNOS === */
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    background-color: transparent;
-}
-
-.navbar {
-    background-color: rgba(89, 37, 7, 0.9);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-radius: 0 0 18px 18px;
-    padding: 15px 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-    width: 95%;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    min-height: 70px;
-}
-
-.navbar-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-}
-
-.navbar-logo .circle {
-    height: 60px;
-    width: 60px;
-    object-fit: contain;
-}
-
-.navbar-logo #name {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-}
-
-.navbar-toggler {
-    display: block;
-    background: none;
-    border: none;
-    color: #F9F7D3;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 0 10px;
-}
-
-.navbar-options {
-    display: none;
-    width: 100%;
-    background-color: rgba(89, 37, 7, 0.9);
-    border-radius: 0 0 18px 18px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 10;
-}
-
-.navbar-options.active {
-    display: block;
-}
-
-.navbar-options ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 10px 0;
-    gap: 5px;
-    align-items: center;
-    position: relative;
-}
-
-.navbar-options ul li {
-    padding: 10px 15px;
-    border-radius: 10px;
-    white-space: nowrap;
-    transition: box-shadow 0.3s ease;
-    width: 90%;
-    text-align: center;
-}
-
-.navbar-options ul li:hover {
-    background-color: rgba(242, 235, 133, 0.5);
-    cursor: pointer;
-}
-
-.navbar-options ul li.active {
-    background-color: rgba(242, 235, 133, 0.9);
-    font-weight: 700;
-}
-
-.navbar-options ul .nav-link {
-    color: #F9F7D3;
-}
-
-.active-line {
-    display: none;
-}
+/* === HEADER E NAVBAR ===
+   (estilizada globalmente em style-layout.css) */
 
 /* === SEÇÕES DE CONTEÚDO === */
 .content-section {
@@ -492,72 +391,6 @@ footer a:hover {
 
 /* === RESPONSIVO DESKTOP === */
 @media (min-width: 900px) {
-    .navbar {
-        flex-wrap: nowrap;
-        width: 95%;
-        padding: 10px 1.5rem;
-    }
-
-    .navbar-logo .circle {
-        height: 70px;
-        width: 70px;
-    }
-
-    .navbar-logo #name {
-        font-size: initial;
-    }
-
-    .navbar-toggler {
-        display: none;
-    }
-
-    .navbar-options {
-        display: flex;
-        position: static;
-        width: auto;
-        background-color: transparent;
-        border-radius: 0;
-    }
-
-    .navbar-options ul {
-        flex-direction: row;
-        padding: 0;
-        gap: 15px;
-        width: auto;
-    }
-
-    .navbar-options ul li {
-        width: auto;
-        background-color: transparent;
-        box-shadow: none;
-        padding: 10px 0;
-    }
-
-    .navbar-options ul .nav-link {
-        color: #F9F7D3;
-        font-weight: 600;
-    }
-
-    .navbar-options ul li:hover {
-        background-color: transparent;
-    }
-
-    .navbar-options ul li.active {
-        background-color: transparent;
-        font-weight: 700;
-    }
-
-    .active-line {
-        display: block;
-        position: absolute;
-        bottom: -5px;
-        height: 3px;
-        background-color: #F2EB85;
-        transition: width 0.3s ease, left 0.3s ease;
-        opacity: 0;
-        border-radius: 2px;
-    }
-
     .content-section {
         padding: 100px 40px;
     }
