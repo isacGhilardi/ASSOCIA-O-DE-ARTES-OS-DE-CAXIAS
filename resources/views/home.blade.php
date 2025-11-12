@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associação dos Artesãos de Caxias</title>
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER ORIGINAL DOS ALUNOS -->
+<header class="header">
+    <nav class="navbar">
+        <a class="navbar-logo" href="#home-section">
+            <img class="circle" src="{{ asset('imagens/artesanato_alunos/logo-artesaos.png') }}" alt="Logo do Site">
+            <img id="name" src="{{ asset('imagens/artesanato_alunos/artesaos.png') }}" alt="">
+        </a>
+
+        <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <div class="navbar-options" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home-section">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre-section">Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#eventos-section">Eventos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#artesanatos-section">Artesanatos</a>
+                </li>
+                <!-- LINKS ADICIONAIS PARA INTEGRAÇÃO -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('produtos') }}">Produtos</a>
+                </li>
+                @auth
+                    @if(auth()->user()->isAdmin())
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin.dashboard') }}">Painel Admin</a>
+                        </li>
+                    @endif
+                @endauth
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('contato') }}">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section id="home-section" class="content-section">
+    <div class="container text-center hero-content">
+        <h1>Aqui, o simples ganha forma, o barro respira, a palha canta e as mãos viram poesia.</h1>
+        <p>Bem-vindo ao Artesãos de Caxias MA, um espaço onde a arte popular se encontra com o empreendedorismo criativo. Nosso propósito é conectar quem cria com quem valoriza o feito à mão.</p>
+        
+        <div style="margin-top: 30px;">
+            <a href="#sobre-section" style="background-color: #8B5A42; color: #F9F7D3; padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; text-decoration: none; margin: 10px; display: inline-block;">Conhecer a Associação</a>
+            <a href="{{ route('produtos') }}" style="background-color: transparent; border: 2px solid #8B5A42; color: #8B5A42; padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; margin: 10px; display: inline-block;">Ver Produtos</a>
+        </div>
+    </div>
+</section>
+
+<section id="sobre-section" class="content-section">
+    <div class="container">
+        <div class="sobre-content-wrapper">
+            <div class="sobre-text">
+                <h2>Quem somos</h2>
+                <p>A Associação dos Artesãos de Caxias MA é formada por artistas, empreendedores e sonhadores que acreditam na força do trabalho manual. Nascemos do desejo de valorizar o talento caxiense, promover o desenvolvimento econômico local e manter viva a tradição que atravessa gerações.</p>
+                <p>Caxias é conhecida como Terra de Gonçalves Dias, mas também é terra de mulheres e homens que transformam fibras, sementes, barro e madeira em obras de arte. Cada produto carrega a essência da região, o perfume da mata, o ritmo das quebradeiras de coco e o brilho da criatividade maranhense.</p>
+                
+                <h2>Nossa missão</h2>
+                <p>Promover o artesanato como forma de expressão cultural e fonte de renda sustentável, oferecendo capacitação, apoio e visibilidade aos artesãos de Caxias e região. Queremos que cada associado possa crescer profissionalmente, viver da sua arte e ser reconhecido pelo que faz.</p>
+                
+                <h2>Nossa visão</h2>
+                <p>Ser referência em artesanato sustentável no Maranhão, ampliando oportunidades de mercado e tornando Caxias um polo reconhecido de arte popular e economia criativa.</p>
+                
+                <h2>Nossos valores</h2>
+                <ul>
+                    <li>Tradição: manter viva a sabedoria passada de geração em geração.</li>
+                    <li>Cooperação: o crescimento de um artesão é o crescimento de todos.</li>
+                    <li>Sustentabilidade: respeitar o meio ambiente em cada etapa do processo criativo.</li>
+                    <li>Empreendedorismo: transformar talento em negócio e sonho em sustento.</li>
+                    <li>Autenticidade: cada peça é única, feita com alma e verdade.</li>
+                </ul>
+                
+                <h2>O que fazemos</h2>
+                <p>Além de divulgar o trabalho dos nossos associados, promovemos cursos, oficinas, feiras e exposições que unem arte e aprendizado. Com apoio do Sebrae e das Secretarias Municipais de Cultura e Indústria e Comércio, realizamos capacitações sobre precificação, marketing e gestão, ajudando nossos artesãos a crescerem com solidez e estratégia.</p>
+                <p>Também estamos sempre presentes em festivais culturais e feiras regionais, como o Festival da Economia Criativa, o Festival do Babaçu e o Dia Municipal do Artesão, levando nossa arte para além das fronteiras de Caxias.</p>
+                <p>Nosso perfil no Instagram <a target="_blank" href="https://www.instagram.com/artesaosdecaxias_ma">@artesaosdecaxias_ma</a> é o ponto de encontro virtual da comunidade. Lá mostramos bastidores, produtos e histórias inspiradoras que nascem do talento e da força do povo caxiense.</p>
+            </div>
+            <div class="sobre-image">
+                <img src="{{ asset('imagens/artesanato_alunos/logo-artesaos.png') }}" alt="Logo da Associação" style="width: 100%; max-width: 300px; border-radius: 10px; margin-top: 40px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="eventos-section" class="content-section">
+    <div class="container">
+        <h1 class="text-center" style="margin-bottom: 30px;">Eventos e Atividades</h1>
+        <p class="text-center">Os Artesãos de Caxias MA participam ativamente de eventos culturais e econômicos, que fortalecem a visibilidade e o reconhecimento do trabalho artesanal.</p>
+        <p class="text-center" style="margin-bottom: 40px;">Confira nossos próximos eventos:</p>
+        
+        @if($eventos->isEmpty())
+            <div class="text-center">
+                <p class="text-muted" style="font-size: 1.2rem; margin: 40px 0;">Nenhum evento futuro cadastrado no momento. Volte em breve!</p>
+            </div>
+        @else
+            <div class="eventos-grid">
+                @foreach($eventos as $evento)
+                    <div class="evento-card">
+                        @if($evento->imagem)
+                            <div class="evento-imagem">
+                                <img src="{{ asset('storage/' . $evento->imagem) }}" alt="{{ $evento->nome }}">
+                            </div>
+                        @endif
+                        <div class="evento-conteudo">
+                            <h3 class="evento-titulo">{{ $evento->nome }}</h3>
+                            
+                            <div class="evento-info">
+                                <div class="evento-data">
+                                    <i>📅</i>
+                                    <span>{{ $evento->data_inicio ? $evento->data_inicio->format('d/m/Y H:i') : 'Data a definir' }}</span>
+                                </div>
+                                
+                                @if($evento->local)
+                                    <div class="evento-local">
+                                        <i>📍</i>
+                                        <span>{{ $evento->local }}</span>
+                                    </div>
+                                @endif
+                                
+                                <div class="evento-preco">
+                                    <i>💰</i>
+                                    <span>
+                                        @if($evento->isGratuito())
+                                            <strong>Gratuito</strong>
+                                        @else
+                                            R$ {{ number_format($evento->valor_inscricao, 2, ',', '.') }}
+                                        @endif
+                                    </span>
+                                </div>
+                                
+                                <div class="evento-status">
+                                    <span class="badge-status badge-{{ strtolower($evento->status) }}">
+                                        {{ ucfirst($evento->status) }}
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            @if($evento->descricao)
+                                <p class="evento-descricao">{{ Str::limit($evento->descricao, 150) }}</p>
+                            @endif
+                            
+                            <div class="evento-acoes">
+                                <a href="{{ route('eventos.show', $evento->id_evento) }}" class="btn-evento">
+                                    Ver Detalhes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        @endif
+        
+        <div class="text-center" style="margin-top: 50px;">
+            <a href="{{ route('evento') }}" style="background-color: #8B5A42; color: #F9F7D3; padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-block;">Ver Todos os Eventos</a>
+        </div>
+    </div>
+</section>
+
+<section id="artesanatos-section" class="content-section">
+    <div class="container">
+        <h1 class="text-center">Nossos Artesanatos</h1>
+        <p class="text-center">
+           Nossa loja colaborativa é uma vitrine do talento de Caxias. 
+           Aqui você encontra uma variedade de produtos únicos, feitos à mão por nossos artistas associados.
+        </p>
+
+        <div class="artesanatos-gallery" id="artesanatos-gallery">
+            <!-- Galeria será populada via JavaScript -->
+        </div>
+
+        <div class="text-center" style="margin-top: 40px;">
+            <a href="{{ route('produtos') }}" style="background-color: #8B5A42; color: #F9F7D3; padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-block;">Ver Todos os Produtos</a>
+        </div>
+    </div>
+</section>
+
+<!-- Modal da Galeria -->
+<div id="galleryModal" class="gallery-modal">
+    <div class="modal-content">
+        <span class="close-button">×</span>
+        <img id="modalImage" src="" alt="Imagem do Artesanato">
+        <h3 id="modalTitle">Título do Artesanato</h3>
+        <p id="modalDescription">Descrição detalhada do artesanato.</p>
+    </div>
+</div>
+
+<footer>
+    <span>© 2025 - Todos os direitos reservados</span>
+    <span> | Telefone: <a href="tel:+5599988111518">+55 99 98811-1518</a></span>
+    <span> | Email: <a href="mailto:associacaodosartesaosdecaxias@gmail.com">associacaodosartesaosdecaxias@gmail.com</a></span>
+    <span> | Instagram: <a href="https://www.instagram.com/artesaosdecaxias_ma" target="_blank">@artesaosdecaxias_ma</a></span>
+</footer>
+
+<script src="{{ asset('js/home.js') }}"></script>
+</body>
+</html>

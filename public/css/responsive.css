@@ -1,0 +1,589 @@
+/* ===============================================
+   RESPONSIVIDADE PARA TODAS AS PÁGINAS
+   =============================================== */
+
+/* ========================================
+   BREAKPOINTS PADRÃO
+   ======================================== */
+/* 
+   Mobile: até 767px
+   Tablet: 768px - 1023px  
+   Desktop: 1024px+
+*/
+
+/* ========================================
+   LAYOUT PRINCIPAL (header, nav, footer)
+   ======================================== */
+
+/* MOBILE - até 767px */
+@media (max-width: 767px) {
+    /* Header responsivo */
+    header {
+        padding: 15px 20px !important;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo h1 {
+        font-size: 1.1rem !important;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 45px !important;
+    }
+
+    .logo a {
+        flex-direction: column;
+        gap: 8px !important;
+        text-align: center;
+    }
+
+    /* Menu mobile */
+    nav ul {
+        flex-direction: column !important;
+        gap: 15px !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-cta {
+        width: auto !important;
+        padding: 10px 20px !important;
+    }
+
+    /* Conteúdo principal */
+    main {
+        padding: 20px 15px !important;
+    }
+
+    main h2 {
+        font-size: 1.5rem !important;
+    }
+
+    /* Footer responsivo */
+    footer {
+        padding: 30px 20px 15px !important;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        text-align: center;
+    }
+
+    .socials {
+        justify-content: center !important;
+    }
+}
+
+/* TABLET - 768px a 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        padding: 15px 30px !important;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem !important;
+    }
+
+    nav ul {
+        gap: 20px !important;
+    }
+
+    main {
+        padding: 40px 30px !important;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* ========================================
+   DASHBOARD ADMINISTRATIVO
+   ======================================== */
+
+@media (max-width: 767px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .dashboard-card {
+        padding: 1rem !important;
+    }
+
+    .dashboard-card h3 {
+        font-size: 0.9rem !important;
+    }
+
+    .dashboard-card strong {
+        font-size: 1.8rem !important;
+    }
+
+    .data-table {
+        padding: 1rem !important;
+    }
+
+    .table-responsive {
+        font-size: 0.85rem;
+    }
+
+    .action-buttons {
+        flex-direction: column !important;
+        gap: 5px !important;
+    }
+
+    .btn-action-edit,
+    .btn-action-delete {
+        width: 100%;
+        justify-content: center !important;
+        padding: 8px 10px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* ========================================
+   PÁGINA DE PRODUTOS
+   ======================================== */
+
+@media (max-width: 767px) {
+    .main-content {
+        flex-direction: column !important;
+    }
+
+    .sidebar {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        order: 2;
+    }
+
+    .produtos-section {
+        width: 100% !important;
+        padding: 0 !important;
+        order: 1;
+    }
+
+    .produtos-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+
+    .produto-card {
+        font-size: 0.85rem;
+    }
+
+    .produto-card h3 {
+        font-size: 1rem !important;
+    }
+
+    .produto-acoes {
+        flex-direction: column !important;
+        gap: 5px !important;
+    }
+
+    .produto-acoes .btn {
+        width: 100% !important;
+        font-size: 0.8rem !important;
+    }
+
+    .barra-busca {
+        margin-bottom: 15px !important;
+    }
+
+    .input-busca {
+        width: 70% !important;
+    }
+
+    /* Modal responsivo */
+    .modal-content {
+        width: 95% !important;
+        margin: 5% auto !important;
+    }
+
+    .modal-body {
+        flex-direction: column !important;
+    }
+
+    .modal-imagem {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+
+    .modal-info {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .produtos-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .sidebar {
+        width: 250px !important;
+    }
+}
+
+/* ========================================
+   PÁGINA DE EVENTOS
+   ======================================== */
+
+/* ==========================================
+   LOGIN/REGISTER PAGE MOBILE
+   ========================================== */
+
+/* Mobile login improvements */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column !important;
+        height: auto !important;
+        background: linear-gradient(135deg, #8B5A42 0%, #5C3A2C 100%) !important;
+    }
+    
+    .esquerda, .direita {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 20px !important;
+        background: transparent !important;
+    }
+    
+    /* OCULTAR COMPLETAMENTE A IMAGEM NO MOBILE */
+    .foto {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        background-image: none !important;
+    }
+    
+    /* Remover qualquer imagem de fundo do body/container */
+    body {
+        background-image: none !important;
+    }
+    
+    /* OCULTAR CADASTRO POR PADRÃO NO MOBILE */
+    .direita {
+        display: none !important;
+    }
+    
+    /* Mostrar apenas quando classe 'show-register' for adicionada */
+    .direita.show-register {
+        display: block !important;
+    }
+    
+    /* Ocultar login quando cadastro estiver ativo */
+    .container.register-active .esquerda {
+        display: none !important;
+    }
+    
+    /* Botão de volta no registro */
+    .back-to-login {
+        background: transparent;
+        border: none;
+        color: var(--cor-base);
+        text-decoration: underline;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+}
+
+/* ========================================
+   CARROSSEL RESPONSIVE
+   ======================================== */
+
+@media (max-width: 767px) {
+    #site-carousel {
+        max-width: 100% !important;
+        margin: 15px 0 !important;
+        height: 200px !important;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px !important;
+    }
+    
+    #site-carousel img {
+        width: 100% !important;
+        height: 200px !important;
+        object-fit: cover !important;
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    #site-carousel img.active {
+        opacity: 1;
+    }
+    
+    /* Indicadores do carrossel */
+    .carousel-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+    }
+    
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.5);
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    .carousel-dot.active {
+        background: rgba(255,255,255,1);
+    }
+}
+
+@media (max-width: 767px) {
+    .eventoCard {
+        margin-bottom: 15px !important;
+    }
+
+    .nomeEvento {
+        height: auto !important;
+        min-height: 60px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .precoEvento {
+        font-size: 0.85rem !important;
+    }
+
+    .btnDetalhes {
+        font-size: 0.8rem !important;
+        padding: 8px 12px !important;
+    }
+}
+
+/* ========================================
+   DETALHES DE EVENTO
+   ======================================== */
+
+@media (max-width: 767px) {
+    .produto-img {
+        height: 200px !important;
+    }
+
+    .container {
+        padding: 15px !important;
+    }
+
+    .row {
+        flex-direction: column !important;
+    }
+
+    .col-12.col-md-5 {
+        margin-bottom: 20px !important;
+    }
+
+    .badge {
+        font-size: 0.75rem !important;
+        padding: 5px 10px !important;
+        margin: 2px !important;
+        display: inline-block;
+    }
+
+    .btn {
+        font-size: 0.9rem !important;
+        padding: 10px !important;
+    }
+}
+
+/* ========================================
+   PÁGINA SOBRE NÓS
+   ======================================== */
+
+@media (max-width: 767px) {
+    .linha {
+        padding: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .linha h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    .linha p {
+        font-size: 1rem !important;
+        text-align: left !important;
+    }
+
+    .container {
+        padding: 0 10px !important;
+    }
+}
+
+/* ========================================
+   FORMULÁRIOS (CREATE/EDIT)
+   ======================================== */
+
+@media (max-width: 767px) {
+    .evento-container,
+    .produto-container {
+        max-width: 100% !important;
+        margin: 20px auto !important;
+        padding: 25px 20px !important;
+        border-radius: 10px !important;
+    }
+
+    .evento-container h1,
+    .produto-container h1 {
+        font-size: 1.4rem !important;
+        margin-bottom: 20px !important;
+    }
+
+    .form-control,
+    .form-select {
+        padding: 10px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        padding: 12px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .alert-danger {
+        padding: 12px 15px !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* ========================================
+   PÁGINA INICIAL
+   ======================================== */
+
+@media (max-width: 767px) {
+    .grade-principal {
+        flex-direction: column !important;
+    }
+
+    .conteudo {
+        width: 100% !important;
+        margin-bottom: 30px !important;
+    }
+
+    .barra-lateral {
+        width: 100% !important;
+    }
+
+    .grade-de-cards {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    .card {
+        padding: 15px !important;
+    }
+
+    .destaque-texto h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .destaque-texto p {
+        font-size: 1rem !important;
+    }
+
+    .botao {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        text-align: center;
+    }
+}
+
+/* ========================================
+   UTILITÁRIOS GERAIS
+   ======================================== */
+
+@media (max-width: 767px) {
+    /* Textos responsivos */
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.3rem !important; }
+    h3 { font-size: 1.1rem !important; }
+    h4 { font-size: 1rem !important; }
+
+    /* Margens e paddings menores */
+    .mb-5 { margin-bottom: 2rem !important; }
+    .mb-4 { margin-bottom: 1.5rem !important; }
+    .py-4 { padding: 1.5rem 0 !important; }
+
+    /* Containers menores */
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* Botões responsivos */
+    .btn {
+        font-size: 0.85rem !important;
+        padding: 8px 15px !important;
+    }
+
+    .btn-lg {
+        font-size: 0.95rem !important;
+        padding: 10px 20px !important;
+    }
+
+    /* Tabelas responsivas */
+    table {
+        font-size: 0.8rem !important;
+    }
+
+    th, td {
+        padding: 8px 4px !important;
+    }
+}
+
+/* ========================================
+   MELHORIAS PARA TOUCH (CELULAR/TABLET)
+   ======================================== */
+
+@media (max-width: 1023px) {
+    /* Aumentar áreas clicáveis */
+    .btn, button, a {
+        min-height: 44px !important;
+        min-width: 44px !important;
+    }
+
+    /* Melhorar espaçamento para dedos */
+    .btn + .btn,
+    a + a {
+        margin-left: 10px !important;
+    }
+
+    /* Input mais fáceis de tocar */
+    input, select, textarea {
+        min-height: 44px !important;
+        font-size: 16px !important; /* Evita zoom no iOS */
+    }
+}

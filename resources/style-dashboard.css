@@ -1,0 +1,231 @@
+    /* ======== BOTÕES PADRÕES DO DASHBOARD ======== */
+    .btn-dashboard-primary {
+        background-color: var(--brand-color, #5C3A2C);
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-dashboard-primary:hover {
+        background-color: var(--highlight-color, #8C5E47);
+        transform: translateY(-1px);
+    }
+
+    .btn-dashboard-outline {
+        border: 2px solid var(--highlight-color, #8C5E47);
+        color: var(--highlight-color, #8C5E47);
+        background-color: transparent;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .btn-dashboard-outline:hover {
+        background-color: var(--highlight-color, #8C5E47);
+        color: #fff;
+        transform: translateY(-1px);
+    }
+
+    /* ======== BOTÕES DE AÇÃO NA TABELA ======== */
+    .action-buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px; /* separação entre os botões */
+    }
+
+    .btn-action-edit,
+    .btn-action-delete {
+        border: 1.8px solid transparent;
+        border-radius: 8px;
+        padding: 5px 12px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: all 0.25s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-action-edit {
+        border-color: #f0ad4e;
+        color: #f0ad4e;
+        background-color: rgba(240, 173, 78, 0.1);
+    }
+
+    .btn-action-edit:hover {
+        background-color: #f0ad4e;
+        color: #fff;
+    }
+
+    .btn-action-delete {
+        border-color: #d9534f;
+        color: #d9534f;
+        background-color: rgba(217, 83, 79, 0.1);
+    }
+
+    .btn-action-delete:hover {
+        background-color: #d9534f;
+        color: #fff;
+    }
+
+    /* ======== GRID E LAYOUT DO DASHBOARD ======== */
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .dashboard-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .dashboard-card h3 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #6b7280;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.5rem;
+    }
+
+    .dashboard-card strong {
+        font-size: 2.2rem;
+        color: #1f2937;
+        display: block;
+    }
+
+    .form-card,
+    .data-table {
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+    }
+
+    .form-card {
+        padding: 1.75rem;
+    }
+
+    .data-table {
+        padding: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .data-table h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .required::after {
+        content: '*';
+        color: #dc3545;
+        margin-left: 4px;
+    }
+
+    /* ======== BOTÕES DE AÇÃO NA TABELA ======== */
+    .action-buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px; /* separação entre os botões */
+    }
+
+    .btn-action-edit,
+    .btn-action-delete {
+        border: 1.8px solid transparent;
+        border-radius: 8px;
+        padding: 5px 12px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: all 0.25s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-action-edit {
+        border-color: #f0ad4e;
+        color: #f0ad4e;
+        background-color: rgba(240, 173, 78, 0.1);
+    }
+
+    .btn-action-edit:hover {
+        background-color: #f0ad4e;
+        color: #fff;
+    }
+
+    .btn-action-delete {
+        border-color: #d9534f;
+        color: #d9534f;
+        background-color: rgba(217, 83, 79, 0.1);
+    }
+
+    .btn-action-delete:hover {
+        background-color: #d9534f;
+        color: #fff;
+    }
+
+    /* ======== GRID E LAYOUT DO DASHBOARD ======== */
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .dashboard-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .dashboard-card h3 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #6b7280;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.5rem;
+    }
+
+    .dashboard-card strong {
+        font-size: 2.2rem;
+        color: #1f2937;
+        display: block;
+    }
+
+    .form-card,
+    .data-table {
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+    }
+
+    .form-card {
+        padding: 1.75rem;
+    }
+
+    .data-table {
+        padding: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .data-table h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .required::after {
+        content: '*';
+        color: #dc3545;
+        margin-left: 4px;
+    }

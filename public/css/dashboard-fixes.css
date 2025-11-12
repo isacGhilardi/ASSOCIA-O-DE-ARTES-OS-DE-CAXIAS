@@ -1,0 +1,124 @@
+/* ==========================================
+   CORREÇÕES DO DASHBOARD ADMINISTRATIVO
+   ========================================== */
+
+/* Correção dos botões de ação */
+.btn-action-edit,
+.btn-action-delete {
+    border: 1.8px solid transparent !important;
+    border-radius: 8px !important;
+    padding: 8px 15px !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    transition: all 0.25s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    text-decoration: none !important;
+    min-width: 80px !important;
+    background-color: #fff !important;
+    cursor: pointer !important;
+}
+
+.btn-action-edit {
+    border-color: #f0ad4e !important;
+    color: #f0ad4e !important;
+    background-color: rgba(240, 173, 78, 0.1) !important;
+}
+
+.btn-action-edit:hover {
+    background-color: #f0ad4e !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(240, 173, 78, 0.3) !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-action-delete {
+    border-color: #d9534f !important;
+    color: #d9534f !important;
+    background-color: rgba(217, 83, 79, 0.1) !important;
+}
+
+.btn-action-delete:hover {
+    background-color: #d9534f !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(217, 83, 79, 0.3) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Ajustes do dashboard para desktop */
+@media (min-width: 1024px) {
+    .data-table {
+        background: #ffffff !important;
+        border-radius: 16px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+        padding: 1.75rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .dashboard-card {
+        background: #ffffff !important;
+        border-radius: 16px !important;
+        padding: 1.5rem !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+        border: 1px solid rgba(0,0,0,0.05) !important;
+    }
+    
+    .btn-dashboard-primary,
+    .btn-dashboard-outline {
+        padding: 12px 20px !important;
+        border-radius: 10px !important;
+        font-weight: 600 !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .btn-dashboard-primary {
+        background-color: #5C3A2C !important;
+        border: none !important;
+        color: #fff !important;
+    }
+    
+    .btn-dashboard-outline {
+        border: 2px solid #8C5E47 !important;
+        color: #8C5E47 !important;
+        background-color: transparent !important;
+    }
+    
+    .btn-dashboard-primary:hover,
+    .btn-dashboard-outline:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+}
+
+/* Responsive mobile dashboard */
+@media (max-width: 767px) {
+    .action-buttons {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+    
+    .btn-action-edit,
+    .btn-action-delete {
+        width: 100% !important;
+        padding: 10px 15px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .data-table {
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .table-responsive {
+        font-size: 0.85rem !important;
+    }
+}
+
+/* Correção para indicadores do carrossel desktop */
+@media (min-width: 768px) {
+    .carousel-indicators {
+        display: none !important;
+    }
+}
