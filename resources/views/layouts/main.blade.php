@@ -29,7 +29,7 @@
         }
 
         .navbar {
-            background-color: rgba(89, 37, 7, 0.7) !important;
+            background-color: rgba(122, 47, 31) !important;
         }
 
         .nav-link,
@@ -73,7 +73,7 @@
         /* Botão Associe-se */
         .btn-associe {
             background-color: #F2EB85;
-            color: #592507 !important;
+            color: #7a2f1f !important;
             padding: 8px 20px;
             border-radius: 20px;
             font-weight: 700 !important;

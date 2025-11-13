@@ -37,12 +37,12 @@
             background: url('{{ asset('imagens/artesanato_alunos/back-logo.png') }}') no-repeat center/contain;
             opacity: 0.1;
             pointer-events: none;
-            z-index: -1;
+            z-index: -1;   
         }
 
         a {
             text-decoration: none;
-            color: #592507;
+            color: #7a2f1f;
             font-weight: 600;
         }
 
@@ -55,16 +55,16 @@
         }
 
         .navbar {
-            background-color: rgba(89, 37, 7, 0.7);
+            background-color: rgba(122, 47, 31);
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border-radius: 0 0 18px 18px;
-            padding: 10px 1rem;
+            padding: 10px 1;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            position: relative;
+            position: center;
             width: 95%;
             max-width: 1200px;
             margin: 0 auto;
@@ -100,7 +100,7 @@
         .navbar-options {
             display: none;
             width: 100%;
-            background-color: rgba(89, 37, 7, 0.9);
+            background-color: rgba(122, 47, 31);
             border-radius: 0 0 18px 18px;
             position: absolute;
             top: 100%;
@@ -154,7 +154,7 @@
         /* Botão Associe-se */
         .btn-associe {
             background-color: #F2EB85;
-            color: #592507 !important;
+            color: #7a2f1f !important;
             padding: 8px 20px;
             border-radius: 20px;
             font-weight: 700;
@@ -252,7 +252,7 @@
             justify-content: center;
             padding: 80px 20px;
             box-sizing: border-box;
-            color: #592507;
+            color: #7a2f1f;
         }
 
         #home-section {
@@ -265,7 +265,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             line-height: 1.3;
-            color: #592507;
+            color: #7a2f1f;
         }
 
         .hero-content p {
@@ -372,7 +372,7 @@
 
         .gallery-item h3 {
             font-size: 1.1rem;
-            color: #592507;
+            color: #7a2f1f;
             margin: 0;
         }
 
@@ -411,7 +411,7 @@
         }
 
         .modal-content h3 {
-            color: #592507;
+            color: #7a2f1f;
             font-size: 1.8rem;
             margin-bottom: 10px;
         }
@@ -434,7 +434,7 @@
 
         .close-button:hover,
         .close-button:focus {
-            color: #592507;
+            color: #7a2f1f;
             text-decoration: none;
             cursor: pointer;
         }
@@ -485,7 +485,7 @@
 
         .evento-titulo {
             font-size: 1.4rem;
-            color: #592507;
+            color: #7a2f1f;
             margin: 0;
             font-weight: 700;
         }
@@ -560,7 +560,7 @@
         }
 
         .btn-evento:hover {
-            background-color: #592507;
+            background-color: #7a2f1f;
             color: #F9F7D3;
         }
 

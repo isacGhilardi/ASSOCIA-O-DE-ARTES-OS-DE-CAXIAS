@@ -28,7 +28,7 @@ body {
 }
 
 .navbar {
-    background-color: rgba(89, 37, 7, 0.7);
+    background-color: rgba(122, 47, 31);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 0 0 18px 18px;
@@ -73,7 +73,7 @@ body {
 .navbar-options {
     display: none;
     width: 100%;
-    background-color: rgba(89, 37, 7, 0.9);
+    background-color: rgba(122, 47, 31);
     border-radius: 0 0 18px 18px;
     position: absolute;
     top: 100%;
@@ -277,12 +277,12 @@ body {
 .layout-main h2 {
     font-size: 2rem;
     margin-bottom: 15px;
-    color: #7A2E1D;
+    color: #7a2f1f;
 }
 
 /* Rodapé */
 footer {
-    background: #2B1A15;
+    background: #7a2f1f;
     color: #ddd;
     padding: 24px 40px 16px;
 }
