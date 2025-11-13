@@ -550,7 +550,7 @@
             display: inline-block;
             width: 100%;
             padding: 12px 20px;
-            background-color: #8B5A42;
+            background-color: #7a2f1f;
             color: #F9F7D3;
             text-align: center;
             border-radius: 8px;
@@ -567,7 +567,7 @@
         /* FOOTER */
         footer {
             width: 100%;
-            background-color: rgba(153, 121, 88, 1);
+            background-color: rgba(122, 47, 31, 1);
             color: #F9F7D3;
             padding: 10px;
             font-size: 14px;

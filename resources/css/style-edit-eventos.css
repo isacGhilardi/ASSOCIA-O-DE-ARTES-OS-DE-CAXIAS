@@ -38,7 +38,7 @@
     }
 
     .btn-primary {
-        background-color: var(--brand-color, #5C3A2C);
+        background-color: var(--brand-color, #7a2f1f);
         border: none;
         font-weight: bold;
         transition: 0.3s;
@@ -47,7 +47,7 @@
     }
 
     .btn-primary:hover {
-        background-color: var(--highlight-color, #8C5E47);
+        background-color: var(--highlight-color, #7a2f1f);
         transform: translateY(-2px);
     }
 

@@ -140,6 +140,35 @@
             padding: 1rem !important;
         }
     }
+    .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.dashboard-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.dashboard-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-card strong {
+    display: block;
+    font-size: 1.8rem;
+    color: #5C3A2C;
+    font-weight: 700;
+}
 </style>
 @endsection
 
