@@ -170,7 +170,7 @@ a {
 
 .gallery-item h3 {
     font-size: 1.1rem;
-    color: #592507;
+    color: #7a2f1f;
     margin: 0;
 }
 
@@ -209,7 +209,7 @@ a {
 }
 
 .modal-content h3 {
-    color: #592507;
+    color: #7a2f1f;
     font-size: 1.8rem;
     margin-bottom: 10px;
 }
@@ -232,7 +232,7 @@ a {
 
 .close-button:hover,
 .close-button:focus {
-    color: #592507;
+    color: #7a2f1f;
     text-decoration: none;
     cursor: pointer;
 }
@@ -283,7 +283,7 @@ a {
 
 .evento-titulo {
     font-size: 1.4rem;
-    color: #592507;
+    color: #7a2f1f;
     margin: 0;
     font-weight: 700;
 }
@@ -358,7 +358,7 @@ a {
 }
 
 .btn-evento:hover {
-    background-color: #592507;
+    background-color: #7a2f1f;
     color: #F9F7D3;
 }
 
