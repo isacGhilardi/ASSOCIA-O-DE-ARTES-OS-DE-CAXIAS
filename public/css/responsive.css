@@ -256,7 +256,7 @@
     .container {
         flex-direction: column !important;
         height: auto !important;
-        background: linear-gradient(135deg, #8B5A42 0%, #5C3A2C 100%) !important;
+        background: linear-gradient(135deg, #7a2f1f 0%, #7a2f1f 100%) !important;
     }
     
     .esquerda, .direita {

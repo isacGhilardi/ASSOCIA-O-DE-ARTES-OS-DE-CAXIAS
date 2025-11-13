@@ -16,13 +16,13 @@ footer {
     z-index: 10;
 }
 .spanhover:hover{
-    background-color: #7a2e1d70 !important;
+    background-color: #7a2f1f !important;
 }
 .spanhover{
     border: none;
-    background-color: #a4361d !important;
+    background-color: #7a2f1f !important;
     transition-duration: .2s ;
 }
 .textEvent{
-    color:  #a4361d !important;
+    color:  #7a2f1f !important;
 }

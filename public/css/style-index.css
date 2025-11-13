@@ -29,8 +29,8 @@
   --cor-branco: white;
   --transicao: all 0.3s ease;
 
-  --cor-base: #7a2e1d;
-  --cor-placehoder: #7a2e1d70;
+  --cor-base: #7a2f1f;
+  --cor-placehoder: #7a2f1f;
   --fundo-input: #ebe6e6;
 }
 
@@ -508,7 +508,7 @@ footer {
 /* Tudo acima são configurações gerais, o qye todo atributo vai ter e etc*/
 
 :root {
-  --cor-base: #7a2e1d;
+  --cor-base: #7a2f1f;
   --cor-placehoder: #7a2e1d70;
   --fundo-input: #ebe6e6;
 }
@@ -619,7 +619,7 @@ button,#btnLogin {
 button:hover {
   transform: scale(0.95);
   /* Efeito de diminuir o botão quando passar o mouse, feito com tranform para ficar mais facil de animar depois. */
-  background-color: #a5361d;
+  background-color: #7a2f1f;
 }
 
 #RegistrarBtn,
@@ -679,7 +679,7 @@ label {
 #btnLogin:hover,
 button:hover {
   transform: scale(0.95);
-  background-color: #a5361d; /* mantém comportamento já definido */
+  background-color: #7a2f1f; /* mantém comportamento já definido */
 }
 
 /* Classes que o script pode adicionar (garante comportamento idêntico) */

@@ -721,8 +721,8 @@
             <p>Bem-vindo ao Artesãos de Caxias MA, um espaço onde a arte popular se encontra com o empreendedorismo criativo. Nosso propósito é conectar quem cria com quem valoriza o feito à mão.</p>
             
             <div style="margin-top: 30px;">
-                <a href="#sobre-section" style="background-color: #8B5A42; color: #F9F7D3; padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; text-decoration: none; margin: 10px; display: inline-block;">Conhecer a Associação</a>
-                <a href="{{ route('produtos') }}" style="background-color: transparent; border: 2px solid #8B5A42; color: #8B5A42; padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; margin: 10px; display: inline-block;">Ver Produtos</a>
+                <a href="#sobre-section" style="background-color: #7a2f1f; color: #F9F7D3; padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; text-decoration: none; margin: 10px; display: inline-block;">Conhecer a Associação</a>
+                <a href="{{ route('produtos') }}" style="background-color: transparent; border: 2px solid #7a2f1f; color: #7a2f1f; padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; margin: 10px; display: inline-block;">Ver Produtos</a>
             </div>
         </div>
     </section>
@@ -831,7 +831,7 @@
             @endif
             
             <div class="text-center" style="margin-top: 50px;">
-                <a href="{{ route('evento') }}" style="background-color: #8B5A42; color: #F9F7D3; padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-block;">Ver Todos os Eventos</a>
+                <a href="{{ route('evento') }}" style="background-color: #7a2f1f; color: #F9F7D3; padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-block;">Ver Todos os Eventos</a>
             </div>
         </div>
     </section>
@@ -849,7 +849,7 @@
             </div>
 
             <div class="text-center" style="margin-top: 40px;">
-                <a href="{{ route('produtos') }}" style="background-color: #8B5A42; color: #F9F7D3; padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-block;">Ver Todos os Produtos</a>
+                <a href="{{ route('produtos') }}" style="background-color: #7a2f1f; color: #F9F7D3; padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-block;">Ver Todos os Produtos</a>
             </div>
         </div>
     </section>
