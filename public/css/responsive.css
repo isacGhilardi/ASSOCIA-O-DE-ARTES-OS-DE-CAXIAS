@@ -205,12 +205,23 @@
         font-size: 0.8rem !important;
     }
 
+    /* Barra de busca responsiva */
     .barra-busca {
-        margin-bottom: 15px !important;
+        margin-bottom: 20px !important;
+        padding: 0 10px !important;
+    }
+
+    .busca-form {
+        max-width: 100% !important;
     }
 
     .input-busca {
-        width: 70% !important;
+        padding: 12px 16px !important;
+        font-size: 14px !important;
+    }
+
+    .btn-busca {
+        padding: 12px 20px !important;
     }
 
     /* Modal responsivo */
